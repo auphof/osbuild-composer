@@ -5,7 +5,10 @@ ENV GOBIN=/opt/app-root/src/go/bin
 RUN dnf install -y golang \
   krb5-devel \
   gpgme-devel \
-  libassuan-devel
+  libassuan-devel \
+  device-mapper-devel \
+  btrfs-progs-devel \
+  pkgconfig
 WORKDIR /osbuild-composer
 COPY . /osbuild-composer
 ENV GOFLAGS=-mod=vendor
